@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devocional Transformador | Encontre Paz e Propósito com Deus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c6e49;
+            --primary-dark: #1a472a;
+            --primary-light: #4c956c;
+            --secondary-color: #d4e6b5;
+            --accent-color: #ffc9b9;
+            --warning-color: #e63946;
+            --success-color: #2a9d8f;
+            --text-dark: #2f2f2f;
+            --text-light: #5a5a5a;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            --gradient-light: linear-gradient(135deg, #4c956c, #2c6e49);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: var(--primary-dark);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(44, 110, 73, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(44, 110, 73, 0.4);
+        }
+        
+        .btn-warning {
+            background: var(--warning-color);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+        
+        .btn-warning:hover {
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 3px solid var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(44, 110, 73, 0.1);
+        }
+        
+        /* Header */
+        .sales-header {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sales-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sales-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .sales-logo i {
+            margin-right: 10px;
+        }
+        
+        .header-badge {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        /* Hero Section */
+        .sales-hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(212, 230, 181, 0.3) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sales-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-color: var(--primary-light);
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            max-width: 55%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-tagline {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .hero-highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .hero-features {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hero-feature i {
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Price Section */
+        .price-section {
+            padding: 80px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .price-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-strong);
+            padding: 50px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            border: 3px solid var(--primary-light);
+        }
+        
+        .price-badge {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--warning-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .old-price {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+        
+        .new-price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .price-installments {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .price-features {
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .price-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .price-feature:hover {
+            background-color: rgba(44, 110, 73, 0.05);
+        }
+        
+        .price-feature i {
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        .access-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--secondary-color);
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        
+        .access-badge i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--white);
+            font-size: 2rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(44, 110, 73, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: var(--white);
+        }
+        
+        .cta-timer {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            max-width: 500px;
+            margin: 40px auto;
+            backdrop-filter: blur(10px);
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .timer-unit {
+            background-color: var(--white);
+            color: var(--primary-dark);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        
+        .timer-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .timer-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Footer */
+        .sales-footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .sales-footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-disclaimer {
+            font-size: 0.9rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .contact-email i {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .sales-hero::before {
+                width: 100%;
+                opacity: 0.1;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.9rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sales-header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-features {
+                justify-content: center;
+            }
+            
+            .new-price {
+                font-size: 2.8rem;
+            }
+            
+            .timer {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                width: 95%;
+                padding: 0 15px;
+            }
+            
+            .sales-hero, .price-section, .benefits-section, .faq-section, .cta-section {
+                padding: 60px 0;
+            }
+            
+            .price-card {
+                padding: 40px 20px;
+            }
+            
+            .btn {
+                padding: 16px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sales Header -->
+    <header class="sales-header">
+        <div class="container">
+            <div class="sales-logo">
+                <i class="fas fa-cross"></i>
+                Devocional Transformador
+            </div>
+            <div class="header-badge">
+                <i class="fas fa-bolt"></i> Acesso Imediato
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="sales-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tagline">OFERTA ESPECIAL POR TEMPO LIMITADO</span>
+                <h1>Transforme Sua Vida Espiritual em Apenas <span class="hero-highlight">7 Dias</span></h1>
+                <p class="hero-subtitle">Chega de devocionais superficiais que não produzem mudança real. Conheça o método <span class="hero-highlight">testado e comprovado</span> que ajuda a desenvolver uma conexão genuína com Deus e encontrar propósito no dia a dia.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Apenas 7 minutos por dia</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Material bíblico e prático</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Acesso imediato via link</span>
+                    </div>
+                </div>
+                
+                <a href="#offer" class="btn btn-warning">
+                    <i class="fas fa-bolt"></i> QUERO TRANSFORMAR MINHA VIDA ESPIRITURAL
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price-section" id="offer">
+        <div class="container">
+            <div class="price-card">
+                <div class="price-badge">OFERTA POR TEMPO LIMITADO</div>
+                <h2>Devocional Transformador</h2>
+                <p>Método completo para reconectar-se com Deus e encontrar propósito</p>
+                
+                <div class="old-price">De R$ 97,00</div>
+                <div class="new-price">R$ 19,90</div>
+                <div class="price-installments">ou em 1x no cartão</div>
+                
+                <div class="price-features">
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>7 devocionais profundos</strong> - Um para cada dia da semana</span>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Apenas 7 minutos por dia</strong> - Perfeito para rotinas ocupadas</span>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Explicações claras</strong> - Entenda cada versículo profundamente</span>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Perguntas reflexivas</strong> - Para internalizar os ensinamentos</span>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Acesso vitalício</strong> - Volte sempre que precisar</span>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Formato prático</strong> - Leia em qualquer dispositivo</span>
+                    </div>
+                </div>
+                
+                <a href="#cta" class="btn">
+                    <i class="fas fa-lock"></i> SIM, QUERO ME CONECTAR COM DEUS
+                </a>
+                
+                <div class="access-badge">
+                    <i class="fas fa-link"></i>
+                    <span>Acesso imediato via link após a compra</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 style="text-align: center;">O Que Você Vai Conseguir com Este Devocional</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Este não é mais um devocional genérico. É um método testado para transformação espiritual real.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Direção Clara</h3>
+                    <p>Receba orientação divina para decisões importantes e aprenda a discernir a vontade de Deus para sua vida.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cura Emocional</h3>
+                    <p>Supere feridas do passado e encontre a cura que só Deus pode oferecer através de Sua palavra.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Proteção Espiritual</h3>
+                    <p>Fortaleça sua fé e proteja-se contra ataques espirituais através de uma vida de oração consistente.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Clareza Mental</h3>
+                    <p>Encontre foco e propósito através da meditação na Palavra de Deus, organizando seus pensamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center;">Perguntas Frequentes</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Tire suas dúvidas sobre o Devocional Transformador</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo por dia preciso dedicar?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Apenas 7 minutos por dia são suficientes. O devocional foi projetado para ser profundo mas direto ao ponto, perfeito para pessoas com rotinas ocupadas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como receberei o material?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Imediatamente após a confirmação do pagamento, você receberá um link de acesso direto ao conteúdo completo. Pode acessar de qualquer dispositivo com internet.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Funciona para iniciantes na fé?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O conteúdo é acessível tanto para quem está começando quanto para quem já tem anos de caminhada. As explicações são claras e as aplicações práticas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso acessar em qualquer dispositivo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O link de acesso funciona em celulares, tablets e computadores. Você pode ler onde e quando quiser, basta ter conexão com a internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Não Deixe Para Depois o Que Pode Transformar Sua Vida Hoje</h2>
+            <p>Esta oferta especial termina em:</p>
+            
+            <div class="cta-timer">
+                <div class="timer">
+                    <div class="timer-unit">
+                        <span class="timer-value" id="hours">02</span>
+                        <span class="timer-label">Horas</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-value" id="minutes">45</span>
+                        <span class="timer-label">Minutos</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-value" id="seconds">30</span>
+                        <span class="timer-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin: 40px 0;">
+                <a href="#" class="btn btn-warning" style="font-size: 1.2rem; padding: 20px 50px;">
+                    <i class="fas fa-gift"></i> SIM, QUERO ACESSO IMEDIATO POR R$ 19,90
+                </a>
+            </div>
+            
+            <div class="access-badge" style="background-color: rgba(255, 255, 255, 0.2); color: white; max-width: 500px; margin: 0 auto;">
+                <i class="fas fa-link"></i>
+                <span>Receba o link de acesso imediatamente após a confirmação</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="sales-footer">
+        <div class="container">
+            <div class="sales-logo" style="justify-content: center; margin-bottom: 30px;">
+                <i class="fas fa-cross"></i>
+                Devocional Transformador
+            </div>
+            
+            <p>© 2023 Devocional Transformador. Todos os direitos reservados.</p>
+            <p>Este produto não garante resultados espirituais específicos. Os resultados dependem do comprometimento de cada pessoa.</p>
+            
+            <div class="contact-email">
+                <i class="fas fa-envelope"></i>
+                <span>misahoraa546@gmail.com</span>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>As informações fornecidas neste site são para fins educacionais e não substituem aconselhamento pastoral ou profissional.</p>
+                <p>Para dúvidas ou suporte, entre em contato pelo email acima.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (item.classList.contains('active')) {
+                    icon.className = 'fas fa-chevron-up';
+                } else {
+                    icon.className = 'fas fa-chevron-down';
+                }
+            });
+        });
+        
+        // Countdown Timer
+        function updateTimer() {
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            
+            // Set end time (2 hours from now)
+            const now = new Date();
+            const endTime = new Date(now.getTime() + 2 * 60 * 60 * 1000); // 2 hours from now
+            
+            function update() {
+                const now = new Date();
+                const diff = endTime - now;
+                
+                if (diff <= 0) {
+                    hoursElement.textContent = '00';
+                    minutesElement.textContent = '00';
+                    secondsElement.textContent = '00';
+                    return;
+                }
+                
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                hoursElement.textContent = hours.toString().padStart(2, '0');
+                minutesElement.textContent = minutes.toString().padStart(2, '0');
+                secondsElement.textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            update();
+            setInterval(update, 1000);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize timer
+        updateTimer();
+        
+        // Add scroll animation for benefit cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe benefit cards
+            document.querySelectorAll('.benefit-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
